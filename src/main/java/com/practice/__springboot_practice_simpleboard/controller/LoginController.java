@@ -40,4 +40,9 @@ public class LoginController {
         httpSession.setAttribute("user", user);
         return "redirect:/posts";
     }
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/login";
+    }
 }

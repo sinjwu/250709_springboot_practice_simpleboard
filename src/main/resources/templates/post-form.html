@@ -2,11 +2,11 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>➕ 새 글 작성</title>
-    <link rel="stylesheet" href="@{/styles.css}"/>
+    <title>새 글 작성</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 <body class="container">
-<h1>➕ 새 게시글</h1>
+<h1>새 게시글</h1>
 <form th:action="@{/posts/add}" th:object="${postDto}" method="post" class="form-container">
     <p>
         <label>
